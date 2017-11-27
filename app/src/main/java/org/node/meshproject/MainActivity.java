@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //TODO: Share app executable or it's link
         } else if (id == R.id.nav_feedback) {
             //TODO: Proper link
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/N-O-D-E"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Reavershark/meshdevice-android"));
             startActivity(browserIntent);
         }
 
