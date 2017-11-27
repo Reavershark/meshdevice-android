@@ -8,14 +8,14 @@
             android:id="@+id/nav_chat"
             android:icon="@drawable/ic_chat"
             android:title="@string/chat" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_manage"
-            android:title="@string/manage" />
     </group>
 
     <item android:title="@string/more">
         <menu>
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/ic_manage"
+                android:title="@string/manage" />
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_share"

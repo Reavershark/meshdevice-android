@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     // Messages
     private static final int MESSAGE_FORM_REQUEST_CODE = 0;
+    private static final int MANAGE_REQUEST_CODE = 1;
     ArrayList<String> messagesList = new ArrayList<>();
     ListView messages;
     ArrayAdapter messagesArrayAdapter;
@@ -86,18 +87,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        // TODO: Create actual navigation menu's using the drawer
         if (id == R.id.nav_chat) {
-            // TODO: Create multiple menu's using the drawer
 
         } else if (id == R.id.nav_manage) {
-
+            // TODO: User settings
         } else if (id == R.id.nav_share) {
-            //TODO: Share app executable or it's link
+            // TODO: Share actual app form /data/app/org.node.meshproject-1.apk
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Reavershark/meshdevice-android/releases"));
             startActivity(browserIntent);
         } else if (id == R.id.nav_feedback) {
-            //TODO: Proper link
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Reavershark/meshdevice-android"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Reavershark/meshdevice-android/issues"));
             startActivity(browserIntent);
         }
 
