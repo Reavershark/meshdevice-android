@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     // Messages
     private static final int MESSAGE_FORM_REQUEST_CODE = 0;
-    private static final int MANAGE_REQUEST_CODE = 1;
     ArrayList<String> messagesList = new ArrayList<>();
     ListView messages;
     ArrayAdapter messagesArrayAdapter;
