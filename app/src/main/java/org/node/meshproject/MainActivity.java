@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -73,10 +75,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (resultCode == RESULT_OK) {
             String uuid = data.getStringExtra("uuid");
             String message = data.getStringExtra("message");
-            //TODO: Proper message history
-            messagesArrayAdapter.add("To " + uuid + " on " + new Date().toString() + " : " + message);
+            String sender = data.getStringExtra("sender");
+            // TODO: Proper message history
+            messagesArrayAdapter.add("From " + sender + " to " + uuid + " on " + new Date().toString() + " : " + message);
             // Scroll to bottom message
             messages.setSelection(messages.getCount() - 1);
+
+            // TODO: HTTP POST
+            Toast.makeText(this, "Message sent", Toast.LENGTH_SHORT).show();
         }
     }
 

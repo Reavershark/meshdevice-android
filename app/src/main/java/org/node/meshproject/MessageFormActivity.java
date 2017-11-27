@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MessageFormActivity extends AppCompatActivity {
 
@@ -19,14 +18,17 @@ public class MessageFormActivity extends AppCompatActivity {
 
         EditText uuidEditText = (EditText) findViewById(R.id.uuidEditText);
         EditText messageEditText = (EditText) findViewById(R.id.messageEditText);
+        EditText senderEditText = (EditText) findViewById(R.id.senderEditText);
         String uuid = uuidEditText.getText().toString();
         String message = messageEditText.getText().toString();
+        String sender = senderEditText.getText().toString();
 
         Intent intent = new Intent();
         intent.putExtra("uuid", uuid);
         intent.putExtra("message", message);
+        intent.putExtra("sender", sender);
         setResult(RESULT_OK, intent);
-        Toast.makeText(this, "Message sent", Toast.LENGTH_SHORT).show();
+
         finish();
     }
 }
