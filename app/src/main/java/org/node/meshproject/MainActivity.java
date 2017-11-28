@@ -90,13 +90,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        // TODO: Create actual navigation menu's using the drawer
-        if (id == R.id.nav_chat) {
-
-        } else if (id == R.id.nav_manage) {
-            // TODO: User settings
-        } else if (id == R.id.nav_share) {
-            // TODO: Share actual app from this.getApplicationInfo().publicSourceDir
+        if (id == R.id.nav_share) {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Reavershark/meshdevice-android/releases"));
             startActivity(browserIntent);
         } else if (id == R.id.nav_feedback) {
