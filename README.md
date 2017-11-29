@@ -1,2 +1,2 @@
 # meshdevice-android
-Android app for the Mesh Device
+Minimal prototype android app for the Mesh Device with a lot of debug information.
